@@ -5,6 +5,19 @@ app = Flask(__name__)
 @app.route("/")
 def hello():
     return "Hello World!"
+  
+  
+@app.route("/intro")
+def introduction():
+    return "Hello, I am Smurf!!"
+  
+  
+@app.route("/sumIs")
+def sumIs():
+    a = 2
+    b = 5
+    sum1 = a + b
+    return sum1
 
 @app.route('/upload', methods=['GET', 'POST'])
 def upload_file():
