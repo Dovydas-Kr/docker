@@ -60,3 +60,14 @@ def euler2():
 	term2 = sum1
 	answer = "Fibinacci up to 4000000 is " + str(sum1)
      return answer
+     
+     
+     
+@app.route("/listqueues")
+def listqueues():
+     conn= boto.sqs.connect_to_region("eu-west-1", aws_access_key_id='AKIAJ2BJXBF74JPNZKCQ', aws_secret_access_key='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')
+     rs = conn.get_all_queues()
+     queues
+     for q in rs:
+	queues = queue + str(q.id) + "\n"
+     return queues
